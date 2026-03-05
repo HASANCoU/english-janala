@@ -145,6 +145,24 @@
       ></div>
     </section>
 
+    <section class="flex justify-center items-center m-20">
+      <div class="join">
+        <div>
+          <label class="input validator join-item">
+            <input
+              id="input-search"
+              type="text"
+              placeholder="Search Word"
+              required
+            />
+          </label>
+        </div>
+        <button id="btn-search" class="btn btn-primary join-item">
+          Search
+        </button>
+      </div>
+    </section>
+
     <section id="spinner" class="flex items-center justify-center hidden">
       <span class="loading loading-bars loading-xl"></span>
     </section>
@@ -159,6 +177,63 @@
         </p>
         <h2 class="text-4xl font-bold">একটি Lesson Select করুন।</h2>
       </div>
+    </section>
+
+    <section id="faq" class="w-11/12 mx-auto mt-50 mb-60">
+      <h2 class="text-5xl font-bold leading-15 mb-8 text-center">
+        <span class="text-sky-500">Frequently </span>Asked Questions
+      </h2>
+      <ol class="space-y-2">
+        <li class="bg-gray-100 rounded-xl p-5 space-y-2">
+          <div class="flex justify-between">
+            <h2 class="font-semibold text-xl">
+              01. How can I start learning English on this website?
+            </h2>
+            <div><i class="fa-solid fa-minus"></i></div>
+          </div>
+          <p class="text-gray-500">
+            You can start by exploring our beginner lessons, interactive
+            exercises, and quizzes. We also offer structured courses to guide
+            you step by step.
+          </p>
+        </li>
+
+        <li class="bg-gray-100 rounded-xl px-5 py-8">
+          <div class="flex justify-between">
+            <h2 class="font-semibold text-xl">
+              02. Is this website free to use?
+            </h2>
+            <div><i class="fa-solid fa-plus"></i></div>
+          </div>
+        </li>
+
+        <li class="bg-gray-100 rounded-xl px-5 py-8">
+          <div class="flex justify-between">
+            <h2 class="font-semibold text-xl">
+              03. Do I need to create an account?
+            </h2>
+            <div><i class="fa-solid fa-plus"></i></div>
+          </div>
+        </li>
+
+        <li class="bg-gray-100 rounded-xl px-5 py-8">
+          <div class="flex justify-between">
+            <h2 class="font-semibold text-xl">
+             04. How can I build my English vocabulary?
+            </h2>
+            <div><i class="fa-solid fa-plus"></i></div>
+          </div>
+        </li>
+
+        <li class="bg-gray-100 rounded-xl px-5 py-8">
+          <div class="flex justify-between">
+            <h2 class="font-semibold text-xl">
+              05. Do you offer certificates for completed courses?
+            </h2>
+            <div><i class="fa-solid fa-plus"></i></div>
+          </div>
+        </li>
+      </ol>
     </section>
 
     <!-- Modal -->
@@ -179,6 +254,33 @@
         </div>
       </div>
     </dialog>
+
+    <footer class="flex justify-between items-center bg-[#edf6ff] px-15 py-20">
+      <div class="space-y-2">
+        <a href="" class="flex items-center space-x-1"
+          ><span class="font-bold text-lg">English</span
+          ><img src="./assets/logo.png" alt="LOgo" /><span
+            class="font-bangla text-lg font-semibold"
+            >জানালা</span
+          ></a
+        >
+
+        <h3 class="font-bangla text-gray-500">ইংরেজি শিখুন সহজে</h3>
+        <p class="font-extralight text-xs">Providing ED-Tech Applications since 2025</p>
+      </div>
+
+      <div class="space-y-2">
+        <p class="text-sm font-light">Follow us</p>
+        <div>
+          <ul class="flex space-x-1">
+            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
 
     <script src="./script/index.js"></script>
   </body>

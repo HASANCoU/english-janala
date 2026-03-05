@@ -3,6 +3,16 @@ const synonyms = (arr) =>{
     return newArr.join("");
 }
 
+
+//Sound Function
+const pronounceWord = (word) => {
+  const utterance = new SpeechSynthesisUtterance(word);
+  utterance.lang = "en-EN"; // English
+  window.speechSynthesis.speak(utterance);
+}
+
+
+
 const loadSpinner =(status)=>{
     if(status==true){
         document.getElementById("spinner").classList.remove("hidden");
@@ -115,7 +125,7 @@ const disPlayLevelWord = (words) =>{
 
         <div class="flex items-center justify-between">
         <button onclick="wordDetails(${word.id})" class="btn bg-[#1a91ff10] hover:bg-[#1a91ff80]"><i class="fa-solid fa-circle-info"></i></button>
-        <button class="btn bg-[#1a91ff10] hover:bg-[#1a91ff80]"><i class="fa-solid fa-volume-high"></i></button>
+        <button onclick="pronounceWord('${word.word}')" class="btn bg-[#1a91ff10] hover:bg-[#1a91ff80]"><i class="fa-solid fa-volume-high"></i></button>
         </div>
       </div>
         `;
@@ -144,4 +154,23 @@ const disPlayLesson = (lessons) =>{
     }
     
 }
+
+
+document.getElementById("btn-search").addEventListener("click", ()=>{
+
+    removeActive();
+    const searchInput = document.getElementById("input-search");
+    const searchValue = searchInput.value.trim().toLowerCase();
+    console.log(searchValue);
+
+    fetch("https://openapi.programming-hero.com/api/words/all")
+    .then((res)=>res.json())
+    .then((data)=>{
+        const allWords = data.data;
+        const filterWords = allWords.filter((word)=>word.word.toLowerCase().includes(searchValue));
+        disPlayLevelWord(filterWords);
+    })
+})
+
+
 loadLessons();
